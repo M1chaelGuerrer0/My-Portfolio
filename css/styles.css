@@ -1,6 +1,7 @@
 /* Box Model Fix */
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,*::before, *::after {
@@ -112,6 +113,7 @@ section h2 {
     background-color: #1C1B19;
     padding: 15px 0;
     z-index: 1000;
+    text-align: center;
 }
 
 .main-nav a {
@@ -159,6 +161,16 @@ footer {
 /* Education
 ------------------------------------*/
 .education-section {
-    background-color: #1C1B19;
+    background: 
+        linear-gradient(
+            rgba(28, 27, 25, 0.75),
+            rgba(28,27,25,0.9)
+        ),
+        url("../images/background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     padding: 40px;
 }
