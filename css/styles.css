@@ -153,7 +153,16 @@ footer {
 /* Work Experience
 ------------------------------------*/
 .work-section {
-    background-color: #1C1B19;
+    background: 
+        linear-gradient(
+            rgba(28, 27, 25, 0.75),
+            rgba(28,27,25,0.9)
+        ),
+        url("../images/background_1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     padding: 40px;
 }
 
@@ -166,11 +175,10 @@ footer {
             rgba(28, 27, 25, 0.75),
             rgba(28,27,25,0.9)
         ),
-        url("../images/background.png");
-    background-attachment: fixed;
+        url("../images/background_2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    background-attachment: fixed;
     padding: 40px;
 }
