@@ -86,11 +86,6 @@ section h2 {
     overflow: hidden;
 }
 
-.contact-info a {
-    padding: 10px;
-    display: inline-block;
-}
-
 .column-narrow {
     width: 30%;
     float: left;
@@ -143,6 +138,15 @@ section h2 {
 
 footer {
     text-align: center;
+}
+
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+
+.contact-info i {
+    margin-right: 8px;
 }
 /* Work Experience
 ------------------------------------*/
