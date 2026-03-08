@@ -1,0 +1,160 @@
+/* Box Model Fix */
+html {
+    box-sizing: border-box;
+}
+
+*,*::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Color Palette
+Primary Dark: #1C1B19
+Deep Olive:   #3F4A1F
+Warm Amber:   #D98C3A
+Soft Cream:   #F2E6D8
+*/
+
+/* Global styles 
+------------------------------------*/
+body {
+    background: #1C1B19;
+    color: #F2E6D8;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    padding-top: 60px;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+strong {
+    font-weight: 500;
+}
+
+p, li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+a {
+    color: #D98C3A;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #F2E6D8;
+}
+
+section h2 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.profile-img {
+    border-radius: 50%;
+}
+
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+}
+
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
+}
+
+.column-narrow {
+    width: 30%;
+    float: left;
+    padding-right: 3%;
+    min-height: 175px;
+}
+
+.column-wide {
+    width: 70%;
+    float: left;
+    min-height: 225px;
+}
+
+.job-item {
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1C1B19;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.main-nav a {
+    color: #F2E6D8;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: #D98C3A;
+}
+
+/* Header & Footer 
+------------------------------------*/
+.header-section {
+    background-color: #3F4A1F;
+    padding: 40px;
+}
+.footer-section {
+    background-color: #3F4A1F;
+    padding: 30px;
+}
+
+footer {
+    text-align: center;
+}
+/* Work Experience
+------------------------------------*/
+.work-section {
+    background-color: #1C1B19;
+    padding: 40px;
+}
+
+
+/* Education
+------------------------------------*/
+.education-section {
+    background-color: #1C1B19;
+    padding: 40px;
+}
