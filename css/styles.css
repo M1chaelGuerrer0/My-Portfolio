@@ -127,6 +127,11 @@ section h2 {
     color: #D98C3A;
 }
 
+.center-text {
+    text-align: center;
+}
+
+
 /* Header & Footer 
 ------------------------------------*/
 .header-section {
@@ -150,6 +155,22 @@ footer {
 .contact-info i {
     margin-right: 8px;
 }
+/* Projects
+------------------------------------*/
+.project-video {
+    width: 100%;
+    height: auto;
+}
+
+.projects-section h2 {
+    text-align: center;
+}
+
+.projects-section img {
+    width: 100%;
+    height: auto;
+}
+
 /* Work Experience
 ------------------------------------*/
 .work-section {

@@ -6,12 +6,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">        
         <link href="css/styles.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <title>Michael Guerrero | Resume</title>
+        <title>Michael Guerrero | Home</title>
     </head>
     <body>
         <!-- // Navigation -->
         <nav class="main-nav">
             <a href="#top">Home</a>
+            <a href="projects">Projects</a>
             <a href="#work">Work Experience</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
@@ -27,19 +28,100 @@
                 />
                 <div class="column-wide">
                     <h1>Michael Guerrero</h1>
-                    <h2>College Undergraduate Student</h2>
-                    <p>Motivated and dependable college student with experience supporting community events and collaborating in team environments. Demonstrates strong communication, organization, and problem-solving skills. Seeking opportunities to continue developing professional skills while contributing positively to an organization.</p>
+                    <h2><em>I build interactive software and gameplay systems.</em></h2>
+
+                    <p>Computer Science graduate interested in gameplay programming and software development.
+                        I've worked on Unity games, interactive web applications, algorithm visualizations,
+                        and collaborative software projects.
+                    </p>
                 </div>
             </div>
         </header>
-        
+
         <main> 
+            <!--// Projects -->
+            <section id="projects" class="projects-section">
+                <div class="content-wrap">
+                    <h2>Projects</h2>
+                    <!--// Project Block-->
+                    <div class="project-item">
+                        <div class="column-narrow">
+                            <h3>Experimentum</h3>
+                            <p><em>Unity, C#</em></p>
+                            <p><em>Project Lead, Main Core Gameplay Developer</em></p>
+                        </div>
+
+                        <div class="column-wide">
+                            <p>
+                                An interactive educational laboratory developed in Unity, featuring guided virtual science 
+                                experiments that teach users how experiments work and why they produce specific results.
+                                As Project Lead and Core Gameplay Developer, I led a five-person development team and 
+                                implemented core gameplay systems, UI, interaction logic, and four of the project's 12 experiments.
+                            </p>
+
+                            <video class="project-video" autoplay loop muted playsinline>
+                                <source src="videos/experimentum_demo_fast.mp4" type="video/mp4">
+                            </video>
+                            <p class="center-text">
+                                For more information, <a href="https://github.com/M1chaelGuerrer0/Experimentum" target="_blank">visit the GitHub repository.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--// End of Project Block-->
+
+                    <!--// Project Block-->
+                    <div class="project-item">
+                        <div class="column-narrow">
+                            <h3>Divide and Conquer Visualizer</h3>
+                            <p><em>JavaScript, HTML, CSS</em></p>
+                            <p><em>Core Functionality Developer</em></p>
+                        </div>
+                        
+                        <div class="column-wide">
+                            <p>
+                                An interactive algorithm visualization tool built by a four-person team to demonstrate Binary Search and Merge Sort.
+                                I implemented most of the application's functionality and HTML structure, including step-by-step 
+                                visualizations and explanations of algorithm time complexity.
+                            </p>
+
+                            <img src="images/D&C.png">
+                            <p class="center-text">
+                                For more information, <a href="https://github.com/M1chaelGuerrer0/Divide-and-Conquer-Visualizer" target="_blank">visit the GitHub repository.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--// End of Project Block-->
+
+                    <!--// Project Block-->
+                    <div class="project-item">
+                        <div class="column-narrow">
+                            <h3>CSUN Campus Map Quiz</h3>
+                            <p><em>JavaScript, HTML, CSS</em></p>
+                        </div>
+                        
+                        <div class="column-wide">
+                            <p>
+                                An interactive campus geography game built with JavaScript and the Google Maps API. Players identify CSUN buildings
+                                by selecting their locations on the map and earn points based on their guesses. The original live demo is currently
+                                unavailable because its API configuration is no longer active. A screenshot of the application is provided to demonstrate the project.
+                            </p>
+
+                            <img src="images/GEO_API.png">
+                            <p class="center-text">
+                                For more information, <a href="https://github.com/M1chaelGuerrer0/CSUN-Campus-Map-Quiz" target="_blank">visit the GitHub repository.</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!--// End of Project Block-->
+                </div>
+            </section>
+
             <!-- // Work Experience -->
             <section id="work" class="work-section">
                 <div class="content-wrap">
                     <h2>Work Experience</h2>
-                    
-                    <!-- Job Details: copy this whole block to add more jobs -->
+
+                    <!-- Job Details-->
                     <div class="job-item">
                         <div class="column-narrow">
                             <h3>Open House Volunteer</h3>
@@ -47,10 +129,8 @@
                             <p>October 2022 – November 2022</p>
                         </div>
                         <div class="column-wide">
-                            <!-- Add as many paragraphs as you need. -->
                             <p>As an Open House Volunteer for CSUN’s Educational Opportunity Program (EOP), I assisted with event preparation and student outreach during the university’s open house. I collaborated with a team to create and distribute promotional materials while sharing my personal experience with prospective students and families interested in the program.</p>
-                            
-                            <!-- This list can be deleted if you don't want to use it. -->
+
                             <p>Major Duties:</p>
                             <ul>
                                 <li>Collaborated with team members to design and assemble promotional buttons</li>
@@ -63,7 +143,6 @@
                     </div>  
                     <!-- end of Job Details block. -->
 
-                    <!-- Job Details: copy this whole block to add more jobs -->
                     <div class="job-item">
                         <div class="column-narrow">
                             <h3>Event Volunteer</h3>
@@ -71,10 +150,8 @@
                             <p>August 2021 - June 2022</p>
                         </div>
                         <div class="column-wide">
-                            <!-- Add as many paragraphs as you need. -->
                             <p>As a Event Volunteer for the Educare Foundation, I assisted with the planning and execution of local community events. I aided staff with event logistics, and promoted the mission of the Foundation throughout the community and school.</p>
-                            
-                            <!-- This list can be deleted if you don't want to use it. -->
+
                             <p>Major Duties:</p>
                             <ul>
                                 <li>Setting up promotional materials, displays, and signs for the events </li>
@@ -94,42 +171,34 @@
                 <div class="content-wrap">
                     <h2>Education</h2>
 
-                    <!-- School details: copy this whole block to add more schools. -->
                     <h3>California State University Northridge, 2022 - 2026</h3>
-                    <p>Bachelor of Science in Computer Science - In Progress</p>
-                    
-                    <!-- Add as many paragraphs as you need. -->
+                    <p>Bachelor's Degree in Computer Science</p>
+
                     <p>Relevant coursework includes Algorithms, Advanced Data Structures, Operating Systems, Computer Architecture, Database Design, Software Engineering, Machine Learning, Web Development, Human–Computer Interaction, Senior Design I & II.</p>
                     <!-- End of school details. -->
                 </div>
             </section>
         </main>
-        
+
         <!-- // Footer & contact info -->
         <footer id="contact" class="footer-section">
             <div class="content-wrap">
                 <h2>Contact Info</h2>
-                
-                <!-- Social media and contact links. Add or remove any networks. -->
+
+                <!-- Contact links -->
                 <div class="contact-info">
                     <a href="mailto:michael.isaak.guerrero@gmail.com">
                         <i class="fa-solid fa-envelope"></i> Email
                     </a>
-                
-                    <a href="https://www.instagram.com/michael.the.lord/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i> Instagram
-                    </a>
-                
+
                     <a href="https://github.com/M1chaelGuerrer0" target="_blank">
                         <i class="fa-brands fa-github"></i> GitHub
                     </a>
-                
+
                     <a href="https://www.linkedin.com/in/michael-guerrero-5211672a2/" target="_blank">
                         <i class="fa-brands fa-linkedin"></i> LinkedIn
                     </a>
                 </div>
-
-                <p>Copyright 2026 by Michael Guerrero</p>
             </div>
         </footer>
     </body>
