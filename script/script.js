@@ -4,6 +4,63 @@ const nextButton = document.querySelector("#next-project");
 const projectItems = Array.from(projectTrack.querySelectorAll(".project-item"));
 const projectDots = document.querySelector("#project-dots");
 const currentProjectText = document.querySelector("#current-project");
+const projectMedia = Array.from(
+    document.querySelectorAll(".project-video, .project-item .column-wide img")
+);
+
+function toggleMediaZoom(media) {
+    const isZoomed = !media.classList.contains("is-zoomed");
+
+    projectMedia.forEach((projectMediaItem) => {
+        projectMediaItem.classList.remove("is-zoomed");
+        projectMediaItem.setAttribute("aria-pressed", "false");
+    });
+
+    if (isZoomed) {
+        media.classList.add("is-zoomed");
+        media.setAttribute("aria-pressed", "true");
+    }
+
+    document.body.classList.toggle("has-zoomed-media", isZoomed);
+}
+
+projectMedia.forEach((media) => {
+    const mediaType = media instanceof HTMLVideoElement ? "video" : "image";
+
+    media.tabIndex = 0;
+    media.setAttribute("role", "button");
+    media.setAttribute("aria-label", `Toggle zoom for project ${mediaType}`);
+    media.setAttribute("aria-pressed", "false");
+    media.addEventListener("click", () => toggleMediaZoom(media));
+    media.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            toggleMediaZoom(media);
+        }
+    });
+});
+
+document.addEventListener("click", (event) => {
+    const zoomedMedia = projectMedia.find((media) =>
+        media.classList.contains("is-zoomed")
+    );
+
+    if (zoomedMedia && !zoomedMedia.contains(event.target)) {
+        toggleMediaZoom(zoomedMedia);
+    }
+});
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        const zoomedMedia = projectMedia.find((media) =>
+            media.classList.contains("is-zoomed")
+        );
+
+        if (zoomedMedia) {
+            toggleMediaZoom(zoomedMedia);
+        }
+    }
+});
 
 const dotButtons = projectItems.map((project, index) => {
     const button = document.createElement("button");

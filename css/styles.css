@@ -157,10 +157,41 @@ footer {
 }
 /* Projects
 ------------------------------------*/
+.projects-section .content-wrap {
+    max-width: 1150px;
+}
+
 .project-video {
     width: 100%;
     height: auto;
     border: 5px solid #D98C3A;
+}
+
+.project-video,
+.project-item .column-wide img {
+    cursor: zoom-in;
+}
+
+body.has-zoomed-media::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.project-video.is-zoomed,
+.project-item .column-wide img.is-zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1001;
+    width: min(90vw, 1100px);
+    max-height: 85vh;
+    height: auto;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    cursor: zoom-out;
 }
 
 .projects-section h2 {
@@ -175,7 +206,7 @@ footer {
 
 .project-carousel {
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-columns: 48px minmax(0, 1fr) 48px;
     align-items: center;
     gap: 12px;
 }
@@ -197,7 +228,7 @@ footer {
     flex: 0 0 100%;
     scroll-snap-align: start;
     display: grid;
-    grid-template-columns: minmax(0, 0.43fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 0.3fr) minmax(0, 1fr);
     gap: 30px;
     padding: 10px;
 }
@@ -213,6 +244,53 @@ footer {
 .project-item .column-narrow p {
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 42px;
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.project-link-primary {
+    background: #E99A35;
+    color: #1C1B19;
+}
+
+.project-link-primary:hover {
+    background: #F2E6D8;
+    color: #1C1B19;
+}
+
+.project-link-secondary {
+    border-color: #393735;
+    background: #1C1B19;
+    color: #F2E6D8;
+}
+
+.project-link-secondary:hover {
+    border-color: #D98C3A;
+    color: #D98C3A;
+}
+
+.project-link:focus-visible {
+    outline: 3px solid #D98C3A;
+    outline-offset: 3px;
 }
 
 /* arrow appearance
