@@ -4,9 +4,24 @@ const nextButton = document.querySelector("#next-project");
 const projectItems = Array.from(projectTrack.querySelectorAll(".project-item"));
 const projectDots = document.querySelector("#project-dots");
 const currentProjectText = document.querySelector("#current-project");
+const navToggle = document.querySelector("#nav-toggle");
+const navLinks = document.querySelector("#nav-links");
 const projectMedia = Array.from(
     document.querySelectorAll(".project-video, .project-item .column-wide img")
 );
+
+navToggle.addEventListener("click", () => {
+    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", String(!isOpen));
+    navLinks.classList.toggle("is-open", !isOpen);
+});
+
+navLinks.addEventListener("click", (event) => {
+    if (event.target instanceof HTMLAnchorElement) {
+        navToggle.setAttribute("aria-expanded", "false");
+        navLinks.classList.remove("is-open");
+    }
+});
 
 function toggleMediaZoom(media) {
     const isZoomed = !media.classList.contains("is-zoomed");
@@ -89,7 +104,7 @@ function updateProjectButtons() {
 
     previousButton.hidden = projectTrack.scrollLeft <= 1;
     nextButton.hidden = projectTrack.scrollLeft >= maxScroll - 1;
-    currentProjectText.textContent = `${currentIndex + 1} of ${projectItems.length}`;
+    currentProjectText.textContent = `${currentIndex + 1} of ${projectItems.length} projects`;
 
     dotButtons.forEach((button, index) => {
         const isCurrent = index === currentIndex;
